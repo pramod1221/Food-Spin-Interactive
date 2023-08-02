@@ -1,0 +1,112 @@
+@import "reset.css";
+@import "globals.css";
+
+.main {
+  position: absolute;
+  inset: 0;
+  isolation: isolate;
+  background-color: white;
+  display: grid;
+  justify-content: start;
+  align-items: center;
+}
+
+.saladInfoWrapper {
+  max-width: 28vw;
+  margin-left: 4.5vw;
+  display: grid;
+  gap: 1rem;
+}
+
+.saladPrice {
+  font-size: 2.75rem;
+  line-height: 1;
+}
+.saladName {
+  font-size: 2.25rem;
+  line-height: 1.38;
+  color: var(--color-gray);
+}
+.saladDescription {
+  font-size: 0.8125rem;
+  color: var(--color-gray);
+}
+
+.buyNow {
+  margin-top: 1rem;
+  max-width: 10.18rem;
+  font-size: 0.8125rem;
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-radius: 100vw;
+  text-transform: uppercase;
+}
+
+.saladThumbnails {
+  position: absolute;
+  inset: 0;
+  transition: background-color 0.5s linear;
+}
+
+.clipClass {
+  /* clip-path: circle(588px at 871px -114px); */
+  clip-path: circle(46vw at 70% -18vh);
+}
+
+.allThumbsImage {
+  /* max-width: 50vw; */
+  width: 50%;
+  position: absolute;
+  left: 45.5vw;
+  bottom: -22%;
+  transition: rotate 0.5s linear;
+}
+
+.activeSalad {
+  max-width: 22.5%;
+  position: absolute;
+  left: 60vw;
+  bottom: 5%;
+}
+
+.saladNavigationWrapper {
+  width: 45%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  position: absolute;
+  left: 48vw;
+  bottom: 5%;
+  z-index: 5;
+}
+
+.navButton {
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  color: var(--white);
+  /* text-align: center; */
+  border: 0;
+  font-weight: 700;
+}
+
+.dynamicTextColor {
+  transition: color 0.5s linear;
+}
+
+.dynamicBgColor {
+  transition: background-color 0.5s linear;
+}
+
+/* Devices above mobiles (above 576px) */
+@media only screen and (min-width: 576px) {
+}
+
+/* Specific to small devices (upto 576px) */
+@media only screen and (max-width: 576px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}

@@ -1,0 +1,229 @@
+/* Some global settings */
+:root {
+  --white: white;
+  --black: black;
+  --color-lightorange: #ffeede;
+  --color-lightgreen: #eaffe2;
+  --color-orange: #ff922c;
+  --color-green: #54bf29;
+  --color-dark: #333333;
+  --background-blue: #edf7fa;
+  --font-primary: "Poppins", sans-serif;
+  --base-size: 1rem;
+  --max-width: 100vw;
+  --max-inner-width: 85.9%;
+  --circle-width: calc(var(--max-width) * 0.92);
+  --circle-height: calc(var(--max-width) * 0.92);
+}
+
+::selection {
+  background-color: var(--color-dark);
+  color: var(--white);
+}
+
+body {
+  background-color: var(--white);
+  color: var(--color-dark);
+  font-family: var(--font-primary);
+  margin-inline: auto;
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Some utility */
+
+/* Font families */
+.font--primary {
+  font-family: var(--font-primary);
+}
+
+/* Font weights */
+
+.fontweight--regular {
+  font-weight: 400;
+}
+.fontweight--medium {
+  font-weight: 500;
+}
+.fontweight--semibold {
+  font-weight: 600;
+}
+.fontweight--bold {
+  font-weight: 700;
+}
+
+/* Backgrounds and text colors */
+.background--lightorange {
+  background-color: var(--color-lightorange);
+}
+.background--lightgreen {
+  background-color: var(--color-lightgreen);
+}
+
+.background--orange {
+  background-color: var(--color-orange);
+}
+.background--green {
+  background-color: var(--color-green);
+}
+
+.text--orange {
+  color: var(--color-orange);
+}
+.text--green {
+  color: var(--color-green);
+}
+
+.isolate {
+  isolation: isolate;
+}
+
+.header {
+  background-color: var(--white);
+  padding-block: 1rem;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  max-width: var(--max-inner-width);
+  margin-inline: auto;
+}
+.mainNavigation {
+  display: grid;
+  align-items: center;
+}
+.mainNavigation a {
+  color: var(--black);
+  font-weight: 500;
+}
+.logoWrapper {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.menuWrapper {
+  margin-top: 1rem;
+  display: none;
+}
+.menuListWrapper {
+  display: grid;
+  gap: 1rem;
+}
+
+.mainNavHamburger {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  margin-top: 0.7rem;
+  background-color: transparent;
+  width: 30px;
+  height: 21px;
+}
+.menuListItem.active a {
+  color: var(--color-primary);
+}
+
+.toggleBars {
+  height: 2px;
+  width: 100%;
+  background-color: var(--black);
+  border-radius: 10px;
+}
+
+.navbarButton--active span:nth-child(1) {
+  transform: translateY(7px) rotateZ(45deg);
+}
+
+.navbarButton--active span:nth-child(2) {
+  transform: scaleX(0);
+}
+
+.navbarButton--active span:nth-child(3) {
+  transform: translateY(-7px) rotateZ(-45deg);
+}
+
+/* Footer globals */
+
+.footer {
+  background-color: var(--white);
+  padding-block: 1rem 3rem;
+  max-width: var(--max-inner-width);
+  margin-inline: auto;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.socialWrapper {
+  display: grid;
+  gap: 2rem;
+  grid-auto-flow: column;
+  place-content: center;
+}
+
+.copyrightWrapper {
+  padding-top: 1rem;
+  font-size: 0.875rem;
+}
+
+/* Large (more than 576px) */
+@media only screen and (min-width: 576px) {
+  /* :root {
+    --max-width: 72rem;
+    --max-inner-width: 54rem;
+  } */
+  .header {
+    padding-inline: 0;
+    max-width: var(--max-width);
+  }
+
+  .footer {
+    padding-inline: 0;
+    max-width: var(--max-width);
+  }
+}
+
+/* For tabs (more than betn 576 and 1024px) */
+
+@media only screen and (min-width: 576px) and (max-width: 1024px) {
+  :root {
+    --max-width: 90%;
+    --max-inner-width: 90%;
+  }
+}
+
+/* Large (more than 768px) */
+@media only screen and (min-width: 768px) {
+  .mainNavigation {
+    grid-template-columns: auto 1fr;
+  }
+  .menuWrapper {
+    margin-top: 0;
+    display: grid;
+  }
+  .menuListWrapper {
+    grid-auto-flow: column;
+    justify-content: end;
+    gap: 2rem;
+  }
+  .mainNavHamburger {
+    display: none;
+  }
+}
+
+.navbar--active {
+  display: grid;
+}
+
+.max--width {
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+.max--inner-width {
+  max-width: var(--max-inner-width);
+  margin-inline: auto;
+}

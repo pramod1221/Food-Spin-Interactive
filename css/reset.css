@@ -1,0 +1,129 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  /* to hide horizontal scroll when using width 100vw inside containers */
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  /*  For dynamic base size controlled by rem at other places */
+  /* font-size: clamp(16px, 1.25vw, 24px);  */
+  font-size: 16px; /* REM sizes will be tenth of size in design */
+  line-height: 1.5;
+  color-scheme: light;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  font-display: swap;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  /* vertical-align: middle; */ /* If you override, and make an image inline, it's likely you'll want middle vertical alignment. */
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ol,
+ul {
+  list-style: none;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Remove default text decoration from a tags */
+a {
+  text-decoration: none;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  html {
+    scroll-behavior: initial;
+  }
+}
+/* Bootstrap breakpoints */
+/* Extra small devices (upto 576px) */
+@media only screen and (max-width: 576px) {
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    line-height: 1.5;
+    color-scheme: light;
+  }
+}
